@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeColumnNameUsersIdAtProductTable extends Migration
+class RenameTableProductsGalleries extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,7 @@ class ChangeColumnNameUsersIdAtProductTable extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->renameColumn('user_id', 'users_id');
-        });
+        Schema::rename('products_galleries', 'product_galleries');
     }
 
     /**
@@ -25,8 +23,6 @@ class ChangeColumnNameUsersIdAtProductTable extends Migration
      */
     public function down()
     {
-        // Schema::table('products', function (Blueprint $table) {
-        //     $table->integer('user_id');
-        // });
+        //
     }
 }
