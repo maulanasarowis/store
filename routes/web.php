@@ -19,8 +19,10 @@ Route::get('/categories', 'CategoryController@index')->name('categories');
 Route::get('/categories/{id}', 'CategoryController@detail')->name('categories-detail');
 // Detail
 Route::get('/details/{id}', 'DetailController@index')->name('detail');
+Route::post('/details/{id}', 'DetailController@add')->name('detail-add');
 // cart
 Route::get('/cart', 'CartController@index')->name('cart');
+Route::delete('/cart/{id}', 'CartController@delete')->name('cart-delete');
 Route::get('/success', 'CartController@success')->name('success');
 // register
 Route::get('/register/success', 'Auth\RegisterController@success')->name('register-success');

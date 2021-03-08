@@ -163,8 +163,8 @@
         },
         methods: {
             checkForEmailAvailability: function () {
-                var self = this;
-                axios.get('{{ route('api-register-check') }}', {
+                const self = this;
+                    axios.get('{{ route('api-register-check') }}', {
                         params: {
                             email: this.email
                         }
