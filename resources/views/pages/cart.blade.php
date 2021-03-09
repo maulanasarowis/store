@@ -85,7 +85,9 @@
                         <h2 class="mb-4">Shipping Details</h2>
                     </div>
                 </div>
-                <form action="" id="locations">
+                <form action="{{ route('checkout') }}" id="locations" enctype="multipart/form-data" method="POST">
+                    @csrf
+                    <input type="hidden" name="total_price" value="{{ $totalPrice }}">
                     <div class="row mb-2" data-aos="fade-up" data-aos-delay="200">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -96,7 +98,7 @@
                                     id="address_one"
                                     aria-describedby="emailHelp"
                                     name="address_one"
-                                    value="Setra Duta Cemara"
+                                    value="{{ $user->address_one }}"
                                 />
                             </div>
                         </div>
@@ -109,7 +111,7 @@
                                     id="address_two"
                                     aria-describedby="emailHelp"
                                     name="address_two"
-                                    value="Blok B2 No. 34"
+                                    value="{{ $user->address_two }}"
                                 />
                             </div>
                         </div>
@@ -139,7 +141,7 @@
                                     class="form-control"
                                     id="zip_code"
                                     name="zip_code"
-                                    value="40512"
+                                    value="{{ $user->zip_code }}"
                                 />
                             </div>
                         </div>
@@ -151,7 +153,7 @@
                                     class="form-control"
                                     id="country"
                                     name="country"
-                                    value="Indonesia"
+                                    value="{{ $user->country }}"
                                 />
                             </div>
                         </div>
@@ -163,7 +165,7 @@
                                     class="form-control"
                                     id="phone_number"
                                     name="phone_number"
-                                    value="+628 2020 11111"
+                                    value="{{ $user->phone_number }}"
                                 />
                             </div>
                         </div>
@@ -178,15 +180,15 @@
                     </div>
                     <div class="row" data-aos="fade-up" data-aos-delay="200">
                         <div class="col-4 col-md-2">
-                            <div class="product-title">$10</div>
+                            <div class="product-title">0</div>
                             <div class="product-subtitle">Country Tax</div>
                         </div>
                         <div class="col-4 col-md-3">
-                            <div class="product-title">$280</div>
+                            <div class="product-title">0</div>
                             <div class="product-subtitle">Product Insurance</div>
                         </div>
                         <div class="col-4 col-md-2">
-                            <div class="product-title">$580</div>
+                            <div class="product-title">0</div>
                             <div class="product-subtitle">Ship to Jakarta</div>
                         </div>
                         <div class="col-4 col-md-2">
@@ -194,7 +196,7 @@
                             <div class="product-subtitle">Total</div>
                         </div>
                         <div class="col-8 col-md-3">
-                            <a href="/success.html" class="btn btn-success mt-4 px-4 btn-block">Checkout Now</a>
+                            <button type="submit" class="btn btn-success mt-4 px-4 btn-block">Checkout Now</button>
                         </div>
                     </div>
                 </form>
