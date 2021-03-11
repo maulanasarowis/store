@@ -196,9 +196,9 @@
         },
         data() {
             return {
-                name: "Maulana Sarowis",
-                email: "kamujagoan@mau.id",
-                is_store_open: true,
+                // name: "Maulana Sarowis",
+                // email: "kamujagoan@mau.id",
+                is_store_open: false,
                 store_name: "",
                 email_unavailable: false
             }
