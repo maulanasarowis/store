@@ -19,10 +19,10 @@
                 kami akan menginformasikan resi secept mungkin!
                 </p>
                 <div>
-                <a class="btn btn-success w-50 mt-4" href="/dashboard.html">
+                <a class="btn btn-success w-50 mt-4" href="{{ route('dashboard') }}">
                     My Dashboard
                 </a>
-                <a class="btn btn-signup w-50 mt-2" href="/index.html">
+                <a class="btn btn-signup w-50 mt-2" href="{{ route('home') }}">
                     Go To Shopping
                 </a>
                 </div>

@@ -23,4 +23,10 @@ class HomeController extends Controller
             'products' => $products
         ]);
     }
+
+    // page success register
+    public function success()
+    {
+        return view('pages.register-success');
+    }
 }

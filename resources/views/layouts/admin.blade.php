@@ -106,11 +106,11 @@
                                 aria-expanded="false"
                             >
                                 <img
-                                    src="/images/icon-user.png"
+                                    src="/images/icon-user-2.png"
                                     alt=""
                                     class="rounded-circle mr-2 profile-picture"
                                 />
-                                    Hi, Maulana
+                                    Hi, {{ Auth::user()->name }}
                             </a>
                             <div class="dropdown-menu" >
                                 <a class="dropdown-item" href="/">Logout</a>
@@ -121,11 +121,11 @@
                     <ul class="navbar-nav d-block d-lg-none mt-3">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                Hi, Maulana
+                                Hi, {{ Auth::user()->name }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-inline-block" href="#">
+                            <a class="nav-link d-inline-block" href="/">
                                 Logout
                             </a>
                         </li>

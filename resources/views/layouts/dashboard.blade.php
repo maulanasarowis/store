@@ -96,7 +96,7 @@
                                         aria-expanded="false"
                                     >
                                         <img
-                                            src="/images/icon-user.png"
+                                            src="/images/icon-user-2.png"
                                             alt=""
                                             class="rounded-circle mr-2 profile-picture"
                                         />
@@ -128,8 +128,26 @@
                             </ul>
                             <!-- Mobile Menu -->
                             <ul class="navbar-nav d-block d-lg-none mt-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Hi, {{ Auth::user()->name }}</a>
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        Hi, {{ Auth::user()->name }}
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a href="{{ route('home') }}" class="dropdown-item">Back to Store</a>
+                                        <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">Settings</a>
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item">Logout</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('cart') }}" class="nav-link d-inline-block">Cart</a>

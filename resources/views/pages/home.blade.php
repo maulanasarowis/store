@@ -18,13 +18,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/images/banner.jpg" class="d-block w-100" alt="Carousel Image"/>
+                                    <img src="/images/banner-1.jpg" class="d-block w-100" alt="Carousel Image"/>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/banner.jpg" class="d-block w-100" alt="Carousel Image"/>
+                                    <img src="/images/banner-2.jpg" class="d-block w-100" alt="Carousel Image"/>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/banner.jpg" class="d-block w-100" alt="Carousel Image"/>
+                                    <img src="/images/banner-3.jpg" class="d-block w-100" alt="Carousel Image"/>
                                 </div>
                             </div>
                         </div>

@@ -24,7 +24,8 @@ Route::post('/details/{id}', 'DetailController@add')->name('detail-add');
 Route::get('/success', 'CartController@success')->name('success');
 Route::post('/checkout/callback', 'CheckoutController@callback')->name('midtrans-callback');
 // register
-Route::get('/register/success', 'Auth\RegisterController@success')->name('register-success');
+Route::get('/register-success', 'HomeController@success')->name('register-success');
+// Route::get('/success', 'Auth\RegisterController@success')->name('register-success');
 
 Route::group(['middleware' => ['auth']], function () {
     // cart

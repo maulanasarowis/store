@@ -86,7 +86,7 @@
                                             name="is_store_open"
                                             id="openStoreTrue" 
                                             v-model="is_store_open" 
-                                            :value="true"
+                                            :value="true"                                            
                                             />
                                         <label class="custom-control-label" for="openStoreTrue">Iya, boleh</label>
                                     </div>
@@ -197,7 +197,7 @@
         data() {
             return {
                 // name: "Maulana Sarowis",
-                // email: "kamujagoan@mau.id",
+                // email: "store@mau.id",
                 is_store_open: false,
                 store_name: "",
                 email_unavailable: false

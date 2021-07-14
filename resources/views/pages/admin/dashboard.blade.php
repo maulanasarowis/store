@@ -22,7 +22,7 @@
                             Customer
                             </div>
                             <div class="dashboard-card-subtitle">
-                            {{ $customer }}
+                            {{ number_format($customer) }}
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                             Revenue
                             </div>
                             <div class="dashboard-card-subtitle">
-                            Rp.{{ $revenue }}
+                            Rp.{{  number_format($revenue) }}
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                             Transaction
                             </div>
                             <div class="dashboard-card-subtitle">
-                            {{ $transaction }}
+                            {{ number_format($transaction) }}
                             </div>
                         </div>
                     </div>
